@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='loginstyle.css'>
+    <script>
+        function login(){
+            let userid=document.querySelector("#id-box").value;
+            let userpw=document.querySelector("#pw-box").value;
+            if(userid==""){
+                alert("정보를 입력하세요");
+            }
+            else if(userpw==""){
+                alert("정보를 입력하세요");
+            }
+            
+            else{
+                location.href='main.html';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>로그인</h1>
+    <section>
+        아이디 <input id="id-box" type="text" placeholder="ID를 입력하세요"><br>
+        패스워드 <input id="pw-box" type="password" placeholder="PW를 입력하세요"><br><br><br>
+        <button type="button" onclick="login()">로그인  </button><br>
+        <button type="button" Onclick="location.href='sign.html'">회원가입  </button>
+    </section>
+
+    <footer>
+        
+    </footer>
+</body>
+</html>

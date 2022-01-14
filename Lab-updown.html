@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>업다운게임</title>
+    <style>
+        body {
+            height: 100vh;
+        }
+        .contWrap{
+            position: relative;
+            width: 400px;
+            background-color: antiquewhite;
+            padding: 20px;
+            top : 40%;
+            left : 50%;
+            text-align: center;
+            transform: translate(-50%, -50%); 
+        }
+
+        input {
+            padding: 10px 20px;
+            font-size: 20px;
+            text-align: center;
+            max-width: 170px;
+        }
+
+        button {
+            font-size : 20px;
+            padding: 8px 20px;
+            text-align: center;
+        
+        }
+
+    </style>
+
+    <script>
+        
+
+        window.onload = function(){
+            let i=0
+            let tried = document.querySelector(".try");
+            let k=parseInt(Math.random()*100);
+            let text=document.querySelector(".result");
+            let inputValue=document.querySelector(".userInput");
+            let check=document.querySelector(".startBtn");
+            check.addEventListener("click", show);
+            alert(k);
+            alert("20번 이상 넘어가면 실패입니다.")
+            function enter(){
+                if (window.event.keyCode == 13){
+                    show();
+                }
+            }
+            function show(){
+                if(i>=19){
+                    i+=1;
+                    text.innerHTML="실패입니다";
+                    tried.innerHTML="시도횟수 : "+i;
+                }
+                
+                else{
+                    let x=inputValue.value;
+                     if(k==x){
+                        i+=1;
+                        text.innerHTML="정답입니다";
+                        tried.innerHTML="시도횟수 : "+i;
+                    }
+                   else if(k>x){
+                        i+=1;
+                        text.innerHTML="업";
+                        tried.innerHTML="시도횟수 : "+i;
+                   }
+                   else if(k<x){
+                       i+=1;
+                       text.innerHTML="다운";
+                       tried.innerHTML="시도횟수 : "+i;
+                   }
+                }
+            }
+            
+        }
+
+
+    </script>
+
+    
+</head>
+<body>
+    <div 1class="contWrap">
+        <h3>Choose number</h3>
+        <p class="result">1부터 100사이</p>
+        <p class="try">시도횟수 : 0</p>
+        <input type="number" class="userInput" onkeyup="enterkey()" value="0" max="99" min="0" >
+        <button type="button" class="startBtn">확인</button>
+        <button onClick="window.location.reload()">다시하기</button>
+    </div>
+</body>
+</html>

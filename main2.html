@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>mypage</title>
+    <script>
+        window.onload = function() {
+        let free_childs = document.querySelector("#free_childs");
+        let free_nav = document.querySelector("#free_nav");
+
+        function clickNav(){ 
+            if(free_childs.style.visibility == 'hidden'){ 
+                free_childs.style.visibility = 'visible';
+            }else{ 
+                free_childs.style.visibility = 'hidden';
+            }
+        }
+
+        free_nav.addEventListener("click",clickNav);
+        
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <button id="loginButton" onclick="location.href='login.html'">로그인</button>
+        <button id="signupButton" onclick="location.href='sign.html'">회원가입</button>
+        <h1 id="pageTitle">  This is my page</h1>
+        <h2 id="pageTitle2">  Welcome</h2>
+        <h2 id="pageTitle3">  Visitors</h2>
+    </header>
+    <nav>
+        <button id="myinfo_nav" onclick="location.href='myinfo.html'">내 정보</button>
+        <button id="js_nav" onclick="location.href='Lab-updown.html'">JS 실습</button>
+        <div id="free_nav">자유페이지</div> 
+        <div id="free_childs" style="visibility:hidden">
+        <div class="free_child">HTML</div>
+        <div class="free_child">CSS</div>
+        <div class="free_child">JS</div>
+        </div>
+    </nav>
+    <section>
+        <img src="background.png" alt="cat" width="70%">
+    </section>
+    <footer>
+        <h1>©copyright. All rights reserved.</h1>
+    </footer>
+</body>
+</html>

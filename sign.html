@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='signstyle.css'>
+    <script>
+        function sign(){
+            let id=document.querySelector("#id-box").value;
+            let pw=document.querySelector("#pw-box").value;
+            let name=document.querySelector("#name").value;
+            let email=document.querySelector("#email").value;
+            if(!id){
+                alert("정보를 확인해주세요");
+            }
+            else if(!pw){
+                alert("정보를 확인해주세요");
+            }
+            else if(!name){
+                alert("정보를 확인해주세요");
+            }
+            else if(!email){
+                alert("정보를 확인해주세요");
+            }
+            else{
+                location.href='login.html';
+            }
+        }
+    </script>
+</head>
+<body>
+    <section>
+        아이디 <input id="id-box" type="text" placeholder="ID를 입력하세요"><br>
+        패스워드 <input id="pw-box" type="password" placeholder="PW를 입력하세요"><br>
+        이름 <input id="name" type="name" placeholder="이름을 입력하세요"><br>
+        이메일 <input id="email" typr="email" placeholder="이메일을 입력하세요"><br><br><br>
+
+        <button type="button" Onclick=sign()>회원가입  </button>    
+    </section>
+</body>
+</html>

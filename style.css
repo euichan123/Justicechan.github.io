@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'Vitro_core';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'establishRoomNo703OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRoomNo703OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 800px;
+    background-image: url('background.jpg');
+    display: block;
+}
+
+#loginButton { 
+    margin-left: 85%;
+    top:10px;
+    border: 0;
+    outline: 0;
+    background: none;
+    color: white; 
+    font-size: 25px;
+    cursor: pointer;
+    font-family: 'establishRoomNo703OTF';
+}
+
+#signupButton { 
+    margin-left: 92%; 
+    top: 10px;
+    border: 0;
+    outline: 0;
+    background: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    font-family: 'establishRoomNo703OTF';
+    
+}
+#loginButton,#signupButton{
+    position:fixed;
+}
+#pageTitle { 
+    margin-top: 0px;
+    margin-left:5px;
+    font-weight: 200;
+    font-size: 120px;
+    color: white; 
+    text-shadow: 2px 2px 15px gray; 
+    font-family: 'Vitro_core';
+    
+}
+#pageTitle2 { 
+    margin-left:5px;
+    font-weight: 200;
+    font-size: 90px;
+    color: white; 
+    text-shadow: 2px 2px 15px gray; 
+    font-family: 'Vitro_core';
+    
+}
+#pageTitle3 { 
+    margin-left:5px;
+
+    font-weight: 200;
+    font-size: 90px;
+    color: white; 
+    text-shadow: 2px 2px 15px gray; 
+    font-family: 'Vitro_core';
+    
+}
+
+nav {
+    width: 100%;
+    border: solid;
+    border-color: lightgray;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+#myinfo_nav, #js_nav, #free_nav{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    border: 0;
+    outline: 0;
+    background: none;
+    font-size: large;
+    font-family: 'establishRoomNo703OTF';
+    cursor: pointer;
+}
+
+section {
+    width: 100%;
+    height: 40%;
+    display: inline-block;
+    border: solid;
+    border-color: lightgray;
+    text-align: center;
+    margin-bottom: 5px;
+}
+img {
+    margin: 10px;
+}
+footer {
+    width: 100%;
+    border: none;
+    text-align: center;
+    font-size:5px;
+    color: rgb(188, 188, 189);
+    font-family: 'Vitro_core';
+}
+h1#pageTitle{animation:fadein 3s;}
+h2#pageTitle2{animation:fadein 4s;
+}
+h2#pageTitle3{
+    animation:fadein 5s
+}
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+#loginButton:hover{
+    color: black;
+}
+#signupButton:hover{
+    color:black;
+}
+#myinfo_nav:hover{
+    color:bisque;
+}
+#js_nav:hover{
+    color:bisque;
+    
+}
+#free_nav:hover{
+    color:bisque;
+}
+#free_childs {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    padding: 2%;
+    left: 12.7%;
+    top : 122%;
+    border-bottom:2px solid black;
+
+  }
+  
+  .free_child {
+    margin-bottom: 50%;
+    cursor: pointer;
+    font-family: 'establishRoomNo703OTF';
+  }
+  .free_child:hover{
+      color:burlywood;
+  }

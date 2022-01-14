@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>숫자 맞추기 게임</title>
+  <link rel='stylesheet' href='abc.css'>
+</head>
+<script>
+  let inputValue=document.querySelector('#input-box').value
+  
+  let k=parselnt(Math.random()*100);
+  function check(a){
+    if(a!=k){
+      console.log("정답입니다!");
+    }
+  }
+</script>
+<body> 
+  <section>
+    
+    <input id="input-box" type="text" placeholder="0~99">
+    <button id="checkbox")>확인</button><br><br>
+    
+    <button id="answerbox" >정답확인</button>
+  </section> 
+  
+</body>
+</html>
